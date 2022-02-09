@@ -10,21 +10,21 @@ import nibabel as nib
 from PIL import Image
 import tensorflow as tf
 from skimage.io import imread
-from keras import backend as K
+from tensorflow.keras import backend as K
 import matplotlib.pyplot as plt
 plt.style.use("ggplot")
 from skimage.transform import resize
 from sklearn.model_selection import train_test_split
-from keras.layers import Input
-from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
-from keras.optimizers import Adam
-from keras.losses import binary_crossentropy
-from keras.preprocessing.image import  img_to_array
-from keras.models import Model
-from keras.layers import  BatchNormalization, Activation, Dropout
-from keras.layers.convolutional import Conv2D, Conv2DTranspose
-from keras.layers.pooling import MaxPooling2D
-from keras.layers.merge import concatenate
+from tensorflow.keras.layers import Input
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.losses import binary_crossentropy
+from tensorflow.keras.preprocessing.image import  img_to_array
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import  BatchNormalization, Activation, Dropout
+from tensorflow.keras.layers import Conv2D, Conv2DTranspose
+from tensorflow.keras.layers import MaxPooling2D
+from tensorflow.keras.layers import concatenate
 from tensorflow.keras.metrics import Recall, Precision
 from TV_UNET import get_unet, TV_bin_loss
 
